@@ -40,3 +40,13 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+      
+seeds:
+  my_new_project:
+    +schema: raw
+    jaffle-data:
+      +enabled: "{{ var('load_source_data', false) }}"
