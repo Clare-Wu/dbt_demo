@@ -16,13 +16,13 @@ final as (
         sku as product_id,
 
         ---------- text
-        name as supply_name,
+        supply_name,
 
         ---------- numerics
-        {{ cents_to_dollars('cost') }} as supply_cost,
+        supply_cost,
 
         ---------- booleans
-        perishable as is_perishable_supply
+        is_perishable_supply
 
     from source
 
