@@ -1,5 +1,5 @@
 models:
-  - name: base_supplies
+  - name: base__supplies
     description: >
       List of our supply expenses data with basic cleaning and transformation applied.
 

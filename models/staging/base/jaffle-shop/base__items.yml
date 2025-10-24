@@ -1,5 +1,5 @@
 models:
-  - name: base_items
+  - name: base__items
     description: Individual food and drink items that make up our orders, one row per item.
     columns:
       - name: order_item_id

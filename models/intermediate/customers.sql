@@ -2,7 +2,7 @@ with
 
 customers as (
 
-    select * from {{ ref('base_customers') }}
+    select * from {{ ref('base__customers') }}
 
 ),
 
