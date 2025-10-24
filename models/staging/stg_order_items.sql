@@ -2,7 +2,7 @@ with
 
 source as (
 
-    select * from {{ source('ecom', 'raw_items') }}
+    select * from {{ ref('base_items') }}
 
 ),
 
@@ -11,9 +11,9 @@ final as (
     select
 
         ----------  ids
-        id as order_item_id,
+        order_item_id,
         order_id,
-        sku as product_id
+        product_id
 
     from source
 
