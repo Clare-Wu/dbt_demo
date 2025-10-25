@@ -1,0 +1,14 @@
+macros:
+  - name: <macro name>
+    description: <markdown_string>
+    config:
+      docs:
+        show: true | false
+      meta: {<dictionary>}
+    arguments:
+      - name: <arg name>
+        type: <string>
+        description: <markdown_string>
+      - ... # declare properties of additional arguments
+
+  - name: ... # declare properties of additional macros

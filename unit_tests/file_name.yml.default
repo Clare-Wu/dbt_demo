@@ -1,0 +1,31 @@
+unit_tests:
+  - name: <test-name> # this is the unique name of the test
+    model: <model-name> 
+      versions: #optional
+        include: <list-of-versions-to-include> #optional
+        exclude: <list-of-versions-to-exclude> #optional
+    config: 
+      meta: {dictionary}
+      tags: <string> | [<string>]
+      enabled: {boolean} # optional. v1.9 or higher. If not configured, defaults to `true`
+    given:
+      - input: <ref_or_source_call> # optional for seeds
+        format: dict | csv | sql
+        # either define rows inline or name of fixture
+        rows: {dictionary} | <string>
+        fixture: <fixture-name> # SQL or csv 
+      - input: ... # declare additional inputs
+    expect:
+      format: dict | csv | sql
+      # either define rows inline of rows or name of fixture
+      rows: {dictionary} | <string>
+      fixture: <fixture-name> # SQL or csv 
+    overrides: # optional: configuration for the dbt execution environment
+      macros:
+        is_incremental: true | false
+        dbt_utils.current_timestamp: <string>
+        # ... any other Jinja function from https://docs.getdbt.com/reference/dbt-jinja-functions
+        # ... any other context property
+      vars: {dictionary}
+      env_vars: {dictionary}
+  - name: <test-name> ... # declare additional unit tests

@@ -1,0 +1,33 @@
+<resource_type>:
+  - name: <resource_name>
+    data_tests:
+      - <test_name>: # # Actual name of the test. For example, dbt_utils.equality
+          name: # Human friendly name for the test. For example, equality_fct_test_coverage
+          description: "markdown formatting"
+          arguments: # available in v1.10.5 and higher. Older versions can set the <argument_name> as the top-level property.
+            <argument_name>: <argument_value>
+          config:
+            fail_calc: <string>
+            limit: <integer>
+            severity: error | warn
+            error_if: <string>
+            warn_if: <string>
+            store_failures: true | false
+            where: <string>
+
+    columns:
+      - name: <column_name>
+        data_tests:
+          - <test_name>:
+              name: 
+              description: "markdown formatting"
+              arguments: # available in v1.10.5 and higher. Older versions can set the <argument_name> as the top-level property.
+                <argument_name>: <argument_value>
+              config:
+                fail_calc: <string>
+                limit: <integer>
+                severity: error | warn
+                error_if: <string>
+                warn_if: <string>
+                store_failures: true | false
+                where: <string>
