@@ -11,9 +11,9 @@ final as (
     select
 
         ----------  ids
-        {{ dbt_utils.generate_surrogate_key(['id', 'sku']) }} as supply_uuid,
-        id as supply_id,
-        sku as product_id,
+        {{ dbt_utils.generate_surrogate_key(['supply_id', 'product_id']) }} as supply_uuid,
+        supply_id,
+        product_id,
 
         ---------- text
         supply_name,
