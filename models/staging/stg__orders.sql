@@ -11,7 +11,7 @@ final as (
     select
 
         ----------  ids
-        id as order_id,
+        order_id,
         location_id,
         customer_id,
 
