@@ -49,6 +49,7 @@ models:
     intermediate:
       +materialized: table
     marts:
+      +schema: marts
       +materialized: table
       
 seeds:
