@@ -1,5 +1,5 @@
 semantic_models:
-  - name: dim_locations
+  - name: locations
     description: |
       Location dimension table. The grain of the table is one row per location.
     model: ref('dim_locations')

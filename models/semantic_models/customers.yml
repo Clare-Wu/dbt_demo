@@ -1,5 +1,5 @@
 semantic_models:
-  - name: dim_customers
+  - name: customers
     defaults:
       agg_time_dimension: first_ordered_at
     description: |
