@@ -15,7 +15,7 @@ orders as (
 customer_orders_summary as (
 
     select
-        {{ dbt_utils.generate_surrogate_key(['orders.customer_id']) }} as customer_key
+        {{ dbt_utils.generate_surrogate_key(['orders.customer_id']) }} as customer_key,
 
         orders.customer_id,
 
@@ -29,7 +29,7 @@ customer_orders_summary as (
 
     from orders
 
-    group by 1
+    group by 2
 
 ),
 

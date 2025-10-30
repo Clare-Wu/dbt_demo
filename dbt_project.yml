@@ -1,4 +1,3 @@
-
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
@@ -19,8 +18,6 @@ seed-paths: ["seeds"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 docs-paths: ["docs"]
-
-target-path: "target"  # directory which will store compiled SQL files
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
@@ -42,8 +39,6 @@ vars:
 models:
   my_new_project:
     # Applies to all files under models/example/
-    example:
-      +materialized: table
     staging:
       +materialized: view
     intermediate:
@@ -51,9 +46,14 @@ models:
     marts:
       +schema: marts
       +materialized: table
-      
+
+    +meta:
+      example:
+        +materialized: table
 seeds:
   my_new_project:
     +schema: raw
     jaffle-data:
       +enabled: "{{ var('load_source_data', false) }}"
+flags:
+  require_generic_test_arguments_property: true
