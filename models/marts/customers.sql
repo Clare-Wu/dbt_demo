@@ -15,6 +15,8 @@ orders as (
 customer_orders_summary as (
 
     select
+        {{ dbt_utils.generate_surrogate_key(['orders.customer_id']) }} as customer_key
+
         orders.customer_id,
 
         count(distinct orders.order_id) as count_lifetime_orders,
