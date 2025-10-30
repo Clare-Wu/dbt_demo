@@ -2,12 +2,7 @@ with
 
 customers as (
 
-    select         
-        
-        {{ dbt_utils.generate_surrogate_key(['customer_id']) }} as customer_key,
-        *
-
-    from {{ ref('base__customers') }}
+    select * from {{ ref('base__customers') }}
 
 ),
 

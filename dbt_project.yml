@@ -50,6 +50,10 @@ models:
     +meta:
       example:
         +materialized: table
+        
+    +persist_docs:
+      relation: true
+      columns: true        
 seeds:
   my_new_project:
     +schema: raw
