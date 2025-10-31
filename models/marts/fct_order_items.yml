@@ -9,7 +9,7 @@ models:
         data_tests:
           - relationships:
               arguments:
-                to: ref('orders')
+                to: ref('fct_orders')
                 field: order_id
 unit_tests:
   - name: test_supply_costs_sum_correctly

@@ -19,7 +19,7 @@ models:
         data_tests:
           - relationships:
               arguments:
-                to: ref('stg_customers')
+                to: ref('base__customers')
                 field: customer_id
       - name: order_total
         description: The total amount of the order in USD including tax.

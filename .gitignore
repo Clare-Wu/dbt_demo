@@ -4,3 +4,7 @@ target/
 dbt_packages/
 logs/
 dbt_internal_packages/
+<<<<<<< HEAD
+=======
+.vscode/
+>>>>>>> 698b14d67882cbc5f0760f8465c6703cdaad2515
