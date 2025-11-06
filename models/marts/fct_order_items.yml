@@ -1,3 +1,5 @@
+version: 2
+
 models:
   - name: fct_order_items
     columns:
