@@ -53,19 +53,5 @@ unit_tests:
         - {order_id: 1, count_food_items: 1, count_drink_items: 1, is_drink_order: true, is_food_order: true}
         - {order_id: 2, count_food_items: 1, count_drink_items: 0, is_drink_order: false, is_food_order: true}
 
-saved_queries:
-  - name: order_metrics
-    query_params:
-      metrics:
-        - orders
-        - new_customer_orders
-        - order_total
-        - food_orders
-        - drink_orders
-      group_by:
-        - TimeDimension('metric_time', 'day')
-    exports:
-      - name: order_metrics
-        config:
-          export_as: table
+
           
